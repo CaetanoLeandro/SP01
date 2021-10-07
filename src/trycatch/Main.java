@@ -14,10 +14,13 @@ public class Main {
             Finaciamento f = new Finaciamento(valorVeiculo, entrada, numeroParcelas);
             System.out.println(f.prestacao());
         }
-        catch (RuntimeException ex ){
+        catch (ParcelaNaoAprovadaException ex ){
             System.out.println(ex.getMessage());
         }
 
+        catch (SemEntradaException ex ){
+            System.out.println(ex.getMessage());
+        }
         finally {
             System.out.println("Procedimento finalizado");
         }
