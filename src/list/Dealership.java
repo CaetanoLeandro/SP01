@@ -48,6 +48,6 @@ public class Dealership {
 
 
     public String toString() {
-        return numberId + ", " + brandModel + ", " + String.format("%.2f", vehiclesValue);
+        return numberId + ", " + vehiclesValue + ", " + String.format("%.2f", brandModel);
     }
 }
