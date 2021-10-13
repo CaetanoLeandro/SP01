@@ -1,5 +1,7 @@
 package interfacesabstract;
 
+import publicprivateproteced.veiculo.Veiculo;
+
 public class EntregaVeiculo extends Veiculo implements Imethods{
 
     String limpo, revisado;
@@ -9,7 +11,8 @@ public class EntregaVeiculo extends Veiculo implements Imethods{
 
     }
 
-    public EntregaVeiculo(){
+    public EntregaVeiculo() {
+
     }
 
 

@@ -5,14 +5,15 @@ public class Dealership {
 
     private Integer numberId;
     private String brandModel;
-    private Double vehiclesValue;
+    private Double vehiclesValue = 0.0;
+    private Double carsValue;
 
 
     public Dealership() {
-        
     }
 
     public Dealership(Integer numberId, String brandModel, Double value) {
+        super();
         this.brandModel = brandModel;
         this.numberId = numberId;
         this.vehiclesValue = value;
@@ -42,12 +43,13 @@ public class Dealership {
         this.vehiclesValue = value;
     }
 
+
     public void discountValue(double percentage) {
-        vehiclesValue -= vehiclesValue * percentage / 100.0;
+        vehiclesValue = vehiclesValue - vehiclesValue * percentage / 100.0;
     }
 
 
     public String toString() {
-        return numberId + ", " + vehiclesValue + ", " + String.format("%.2f", brandModel);
+        return numberId  +", " + brandModel+ ", " + vehiclesValue;
     }
 }

@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
+import list.Dealership;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -25,7 +27,7 @@ public class Main {
             System.out.print("License Plate: ");
             Integer id = sc.nextInt();
             while (hasId(list, id)) {
-            System.out.println("ILicense Plate already taken! Try again: ");
+            System.out.println("License Plate already taken! Try again: ");
                 id = sc.nextInt();
         }
 
@@ -59,6 +61,7 @@ public class Main {
         System.out.println("List of vehicle:");
         for (Dealership e : list) {
             System.out.println(e);
+
         }
 
         sc.close();

@@ -1,4 +1,4 @@
-
+package publicprivateproteced.veiculo;
 
 public class Veiculo {
 
@@ -13,13 +13,13 @@ public class Veiculo {
            return kmAtual = 55.000;
         }*/
 
-        public Veiculo(String marca,String cor, double kmAtual){
+        public Veiculo(){
             this.marca = marca;
             this.cor = cor;
             this.kmAtual = kmAtual;
         }
 
-        public Veiculo(){
+        public Veiculo(String modelo, String cor){
 
         }
         public String getMarca() {
@@ -46,6 +46,14 @@ public class Veiculo {
         public void setKmAtual(double kmAtual) {
             this.kmAtual = kmAtual;
         }
+
+    public String getModelo() {
+        return modelo;
     }
+
+    public String getCor2() {
+        return getCor2();
+    }
+}
 
 

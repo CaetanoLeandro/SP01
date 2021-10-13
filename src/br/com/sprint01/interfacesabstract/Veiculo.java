@@ -1,4 +1,4 @@
-package br.com.leandro.sprint01.interfacesabstract;
+package br.com.sprint01.interfacesabstract;
 
 public abstract  class Veiculo {
 
