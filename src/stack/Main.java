@@ -16,10 +16,16 @@ public class Main {
         car.push("Porsche");
         car.push("Charger");
 
-        System.out.println("1° element : " +car.peek()); // retorna o 1°elemento da stack
-        System.out.println("Removed element: " +car.pop()); // retorna e retira o 1°elemento da stack
         System.out.println(car);
+        System.out.println("");
+        System.out.println("1° element : " +car.peek()); // retorna o 1°elemento da stack
+        System.out.println("");
+        System.out.println("Removed element: " +car.pop()); // retorna e retira o 1°elemento da stack
+        System.out.println("");
+        System.out.println(car);
+        System.out.println("");
         car.clear();//Apaga a stack
+        System.out.println("");
         System.out.println(car.empty()? "Stack empty" : "Stack full");
 
 

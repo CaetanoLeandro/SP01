@@ -1,53 +1,46 @@
 package map;
 
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.util.LinkedHashMap;
-import java.io.IOException;
-import java.text.ParseException;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
+    public static void main(String[] args) {
 
-    public static void main(String[] args)  throws ParseException {
 
-        Scanner sc = new Scanner(System.in);
-
-        Map<String, Integer> carsInStock = new LinkedHashMap<>();
-
-        System.out.println("Enter file full path: "); // /home/caetano/IdeaProjects/sprint_01
-        String path = sc.nextLine();
-
-        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
-
-        String line = br.readLine();
-        while (line != null){
-
-            String[] fields = line.split(",");
-            String brand= fields[0];
-            int count = Integer.parseInt(fields[1]);
-
-            if (carsInStock.containsKey(brand)) {
-                int availableCars = carsInStock.get(brand);
-                carsInStock.put(brand, count + availableCars);
-            }
-            else{
-                carsInStock.put(brand, count);
-            }
-            line = br.readLine();
+        // HASHMAP
+        Map<String, Integer> Hmap = new HashMap<>();
+        Hmap.put("Mustang Mach 1", 483);
+        Hmap.put("Mustang Black Shadow", 466);
+        Hmap.put("Mustang Shelby GT350", 533);
+        for (String key : Hmap.keySet()) {
+            System.out.println("Ford " + key + " = " + Hmap.get(key) + "HP");
         }
 
-        for (String key : carsInStock.keySet()) {
-            System.out.println(key +": " + carsInStock.get(key));
+        System.out.println("");
+        System.out.println(" ################################ ");
+        System.out.println("");
+
+        // TREEHMAP
+        Map<String, Integer> tMap = new TreeMap<>();
+        tMap.put("Mustang Mach 1", 483);
+        tMap.put("Mustang Black Shadow", 466);
+        tMap.put("Mustang Shelby GT350", 533);
+        for (String key : tMap.keySet()) {
+            System.out.println("Ford " + key + " = " + tMap.get(key) + "HP");
         }
 
-    } catch (IOException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
+        System.out.println("");
+        System.out.println(" ################################ ");
+        System.out.println("");
 
-        sc.close();
+        // LINKEDHASHMAP
+        Map<String, Integer> lmap = new LinkedHashMap<>();
+        lmap.put("Mustang Mach 1", 483);
+        lmap.put("Mustang Black Shadow", 466);
+        lmap.put("Mustang Shelby GT350", 533);
+        for (String key : lmap.keySet()) {
+            System.out.println("Ford " + key + " = " + tMap.get(key) + "HP");
+        }
     }
 }
