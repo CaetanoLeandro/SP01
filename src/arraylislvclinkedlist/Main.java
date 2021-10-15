@@ -10,7 +10,7 @@ public class Main {
         ArrayList <Integer> aL = new ArrayList<>();
         LinkedList <Integer> lL= new LinkedList<>();
 
-        for (int i = 0; i < 5000; i++){
+        for (int i = 0; i < 5000000; i++){
             aL.add(i);
             lL.add(i);
         }
@@ -18,11 +18,11 @@ public class Main {
 
        //LENDO
         final  long startTimeAL = System.nanoTime();
-        aL.get(300);
+        aL.get(48488);
         final long endTimeAL = System.nanoTime();
 
         final  long startTimeLL = System.nanoTime();
-        lL.get(300);
+        lL.get(48488);
         final long endTimeLL = System.nanoTime();
 
         long totalTimeAL= endTimeAL - startTimeAL;
@@ -31,11 +31,11 @@ public class Main {
 
         // INSERINDO
         final  long startTimeAL1 = System.nanoTime();
-        aL.add(300);
+        aL.add(1000000);
         final long endTimeAL1 = System.nanoTime();
 
         final  long startTimeLL1 = System.nanoTime();
-        lL.add(300);
+        lL.add(1000000);
         final long endTimeLL1 = System.nanoTime();
 
         long totalTimeAL1 = endTimeAL1 - startTimeAL1;
@@ -44,11 +44,11 @@ public class Main {
 
         // REMOVENDO
         final  long startTimeAL2 = System.nanoTime();
-        aL.remove(300);
+        aL.remove(1000001);
         final long endTimeAL2 = System.nanoTime();
 
         final  long startTimeLL2 = System.nanoTime();
-        lL.remove(300);
+        lL.remove(1000001);
         final long endTimeLL2 = System.nanoTime();
 
         long totalTimeAL2 = endTimeAL2 - startTimeAL2;

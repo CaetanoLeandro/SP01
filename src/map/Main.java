@@ -42,5 +42,14 @@ public class Main {
         for (String key : lmap.keySet()) {
             System.out.println("Ford " + key + " = " + tMap.get(key) + "HP");
         }
+
+        //HASHSET
+
+        HashSet<String> HsMap = new HashSet<>();
+        HsMap.add("Mustang Mach 1");
+        HsMap.add("Mustang Black Shadow");
+        HsMap.add("Mustang Shelby GT350");
+        HsMap.add("Mustang Mach 1");
+            System.out.println("Ford " + HsMap);
     }
 }
