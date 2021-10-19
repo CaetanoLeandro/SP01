@@ -39,8 +39,6 @@ public class Main {
         System.out.println("Ímpares"+ impares);
         System.out.println("Pares"+ pares);
         System.out.println("Primos"+ dobro);
-
-
     }
 }
 
