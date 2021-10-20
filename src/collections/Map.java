@@ -24,27 +24,27 @@ public class Map {
         //CREATE 1 OBJECT
         System.out.println("Create object 1:");
 
-        HashMapCarsCreate(80000);
-        TreeMapCarsCreate(80000);
-        linkedHashMapCarsCreate(80000);
+        HashMapCarsCreate(800000);
+        TreeMapCarsCreate(800000);
+        linkedHashMapCarsCreate(800000);
 
         System.out.println("");
 
         //READ
         System.out.println("Read:");
 
-        HashMapCarsRead(90000);
-        TreeMapCarsRead(90000);
-        linkedHashMapCarsRead(90000);
+        HashMapCarsRead(900000);
+        TreeMapCarsRead(900000);
+        linkedHashMapCarsRead(900000);
 
         System.out.println("");
 
         //DELETE
         System.out.println("Delete:");
 
-        HashMapCarsDelete(100000);
-        TreeMapCarsDelete(100000);
-        linkedHashMapCarsDelete(100000);
+        HashMapCarsDelete(1000000);
+        TreeMapCarsDelete(1000000);
+        linkedHashMapCarsDelete(1000000);
 
         System.out.println("");
     }
@@ -53,37 +53,37 @@ public class Map {
         //Hash
         public static void HashMapCarsCreate() {
             Long startTime = System.currentTimeMillis();
-            String value = "temp value";
-            for (int i = 0; i < 100000; i++) {
+            String value = "Hash value";
+            for (int i = 0; i < 10000000; i++) {
                 hashMapCars.put(i, value);
             }
             Long endTime = System.currentTimeMillis();
             System.out.println("HashMap create execution time: " + (endTime - startTime)
-                    + "size: " + hashMapCars.size());
+               + " ms " + " - "+"size: " + hashMapCars.size());
         }
 
         //Tree
         public static void TreeMapCarsCreate() {
         Long startTime = System.currentTimeMillis();
-        String value = "temp value";
-        for (int i = 0; i < 100000; i++) {
+        String value = "Tree value";
+        for (int i = 0; i < 10000000; i++) {
             treeMapCars.put(i, value);
         }
         Long endTime = System.currentTimeMillis();
         System.out.println("TreeMap create execution time: " + (endTime - startTime)
-                + "size: " + treeMapCars.size());
+                + " ms " + " - "+ "size: " + treeMapCars.size());
     }
 
         //Linked
         public static void linkedHashMapCarsCreate() {
         Long startTime = System.currentTimeMillis();
-        String value = "temp value";
-        for (int i = 0; i < 100000; i++) {
+        String value = "Linked value";
+        for (int i = 0; i < 10000000; i++) {
             linkedHashMapCars.put(i, value);
         }
         Long endTime = System.currentTimeMillis();
         System.out.println("LinkedHashMap create execution time: " + (endTime - startTime)
-                + "size: "+ linkedHashMapCars.size());
+                + " ms " + " - "+ "size: "+ linkedHashMapCars.size());
     }
 
         //#### CREAT OBJECT ####
@@ -91,88 +91,84 @@ public class Map {
 
         //Hash
         public static void HashMapCarsCreate(int index) {
-        Long startTime = System.currentTimeMillis();
-        String value = "temp value";
+        Long startTime = System.nanoTime();
+        String value = "Hash value";
         hashMapCars.put(index, value);
-        Long endTime = System.currentTimeMillis();
+        Long endTime = System.nanoTime();
         System.out.println("HashMap create execution time: " + (endTime - startTime)
-                + "size: " + hashMapCars.size());
+                + " ns " + " - "+ "size: " + hashMapCars.size());
     }
         // Tree
         public static void TreeMapCarsCreate(int index) {
-        Long startTime = System.currentTimeMillis();
-        String value = "temp value";
+        Long startTime = System.nanoTime();
+        String value = "Tree value";
         treeMapCars.put(index, value);
-        Long endTime = System.currentTimeMillis();
+        Long endTime = System.nanoTime();
         System.out.println("TreeMap create execution time: "  + (endTime - startTime)
-                + "size: " + treeMapCars.size());
+                + " ns " + " - "+ "size: " + treeMapCars.size());
     }
 
         //Linked
         public static void linkedHashMapCarsCreate(int index) {
-        Long startTime = System.currentTimeMillis();
-        String value = "temp value";
+        Long startTime = System.nanoTime();
+        String value = "Linked value";
         linkedHashMapCars.put(index, value);
-        Long endTime = System.currentTimeMillis();
+        Long endTime = System.nanoTime();
         System.out.println("LinkedHashMap create execution time: " + (endTime - startTime)
-                + "size: "+ linkedHashMapCars.size());
+                + " ns " + " - "+ "size: "+ linkedHashMapCars.size());
     }
        // #### READ ####
 
         //Hash
         public static void HashMapCarsRead(int index) {
-        Long startTime = System.currentTimeMillis();
-        String value = "No values read.";
+        Long startTime = System.nanoTime();
         hashMapCars.get(index);
-        Long endTime = System.currentTimeMillis();
+        Long endTime = System.nanoTime();
         System.out.println("HashMap read execution time: " + (endTime - startTime)
-                + "last value: \"" + value + "\"");
+                + " ns " + " - "+ "last value: \"" + hashMapCars.size() + "\"");
     }
         //Tree
         public static void TreeMapCarsRead(int index) {
-        Long startTime = System.currentTimeMillis();
-        String value = "No values read.";
+        Long startTime = System.nanoTime();
         treeMapCars.get(index);
-        Long endTime = System.currentTimeMillis();
+        Long endTime = System.nanoTime();
         System.out.println("TreeMap execution time: " + (endTime - startTime)
-                + "last value: \"" + value + "\"");
+                + " ns " + " - "+ "last value: \"" + treeMapCars.size() + "\"");
     }
         //Linked
         public static void linkedHashMapCarsRead(int index) {
-        Long startTime = System.currentTimeMillis();
-        String value = "No values read.";
+        Long startTime = System.nanoTime();
         linkedHashMapCars.get(index);
-        Long endTime = System.currentTimeMillis();
+        Long endTime = System.nanoTime();
         System.out.println("LinkedHashMap read execution time: " + (endTime - startTime)
-                + "last value: \"" + value + "\"");
+                + " ns " + " - "+ "last value: \"" + linkedHashMapCars.size() + "\"");
     }
 
         // #### DELETE ####
 
         //Hash
         public static void HashMapCarsDelete(int index) {
-        Long startTime = System.currentTimeMillis();
+        Long startTime = System.nanoTime();
         hashMapCars.remove(index);
-        Long endTime = System.currentTimeMillis();
+        Long endTime = System.nanoTime();
         System.out.println("HashMap delete execution time: " + (endTime - startTime)
-                + "size: " + hashMapCars.size());
+                + " ns " + " - "+ "size: " + hashMapCars.size());
     }
         //Tree
         public static void TreeMapCarsDelete(int index) {
-        Long startTime = System.currentTimeMillis();
+        Long startTime = System.nanoTime();
         treeMapCars.remove(index);
-        Long endTime = System.currentTimeMillis();
+        Long endTime = System.nanoTime();
         System.out.println("TreeMap delete execution time: " + (endTime - startTime)
-                + "size: " + treeMapCars.size());
+                + " ns " + " - "+ "size: " + treeMapCars.size());
     }
-
         //Linked
         public static void linkedHashMapCarsDelete(int index) {
-        Long startTime = System.currentTimeMillis();
+        Long startTime = System.nanoTime();
         linkedHashMapCars.remove(index);
-        Long endTime = System.currentTimeMillis();
+        Long endTime = System.nanoTime();
         System.out.println("LinkedHashMap delete execution time: " + (endTime - startTime)
-                + "size: "+ linkedHashMapCars.size());
+                + " ns " + " - "+ "size: "+ linkedHashMapCars.size());
     }
 
 }

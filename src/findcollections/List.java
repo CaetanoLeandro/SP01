@@ -1,10 +1,9 @@
-package arraylislvclinkedlist;
+package findcollections;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Stack;
+import java.util.*;
 
-public class Main {
+public class List {
+
 
     public static void main(String[] args) {
 
@@ -19,7 +18,7 @@ public class Main {
         }
 
 
-       //LENDO
+        //LENDO
         final  long startTimeAL = System.nanoTime();
         aL.get(4);
         final long endTimeAL = System.nanoTime();

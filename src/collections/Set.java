@@ -1,5 +1,7 @@
 package collections;
 
+import com.sun.jdi.Value;
+
 import java.util.*;
 
 public class Set {
@@ -23,27 +25,27 @@ public class Set {
         //CREATE 1 OBJECT
         System.out.println("Create object 1:");
 
-        HashSetCarsCreate(80000);
-        TreeSetCarsCreate(80000);
-        linkedHashSetCarsCreate(80000);
+        HashSetCarsCreate(800000);
+        TreeSetCarsCreate(800000);
+        linkedHashSetCarsCreate(800000);
 
         System.out.println("");
 
         //READ
         System.out.println("Read:");
 
-        HashSetCarsRead(90000);
-        TreeSetCarsRead(90000);
-        linkedHashSetCarsRead(90000);
+        HashSetCarsRead(900000);
+        TreeSetCarsRead(900000);
+        linkedHashSetCarsRead(900000);
 
         System.out.println("");
 
         //DELETE
         System.out.println("Delete:");
 
-        HashSetCarsDelete(100000);
-        TreeSetCarsDelete(100000);
-        linkedHashSetCarsDelete(100000);
+        HashSetCarsDelete(7000000);
+        TreeSetCarsDelete(7000000);
+        linkedHashSetCarsDelete(7000000);
 
         System.out.println("");
     }
@@ -52,34 +54,34 @@ public class Set {
     //Hash
     public static void HashSetCarsCreate() {
         Long startTime = System.currentTimeMillis();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000000; i++) {
             hashSetCars.add(i);
         }
         Long endTime = System.currentTimeMillis();
         System.out.println("HashSet create execution time: " + (endTime - startTime)
-                + "size: " + hashSetCars.size());
+                + " ms " + " - "  + "size: " + hashSetCars.size());
     }
 
     //Tree
     public static void TreeSetCarsCreate() {
         Long startTime = System.currentTimeMillis();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000000; i++) {
             treeSetCars.add(i);
         }
         Long endTime = System.currentTimeMillis();
         System.out.println("TreeSet create execution time: " + (endTime - startTime)
-                + "size: " + treeSetCars.size());
+                + " ms " + " - "  + "size: " + treeSetCars.size());
     }
 
     //Linked
     public static void linkedHashSetCarsCreate() {
         Long startTime = System.currentTimeMillis();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000000; i++) {
             linkedHashSetCars.add(i);
         }
         Long endTime = System.currentTimeMillis();
         System.out.println("LinkedHashSet create execution time: " + (endTime - startTime)
-                + "size: "+ linkedHashSetCars.size());
+                + " ms " + " - " + "size: "+ linkedHashSetCars.size());
     }
 
     //#### CREAT OBJECT ####
@@ -87,86 +89,82 @@ public class Set {
 
     //Hash
     public static void HashSetCarsCreate(int index) {
-        Long startTime = System.currentTimeMillis();
-        String value = "temp value";
+        Long startTime = System.nanoTime();
         hashSetCars.add(index);
         Long endTime = System.currentTimeMillis();
         System.out.println("HashSet create execution time: " + (endTime - startTime)
-                + "size: " + hashSetCars.size());
+                + " ns " + " - " + "size: " + hashSetCars.size());
     }
     // Tree
     public static void TreeSetCarsCreate(int index) {
-        Long startTime = System.currentTimeMillis();
+        Long startTime = System.nanoTime();
         treeSetCars.add(index);
-        Long endTime = System.currentTimeMillis();
+        Long endTime = System.nanoTime();
         System.out.println("TreeSet create execution time: "  + (endTime - startTime)
-                + "size: " + treeSetCars.size());
+                + " ns " + " - "+ "size: " + treeSetCars.size());
     }
 
     //Linked
     public static void linkedHashSetCarsCreate(int index) {
-        Long startTime = System.currentTimeMillis();
+        Long startTime = System.nanoTime();
         linkedHashSetCars.add(index);
-        Long endTime = System.currentTimeMillis();
+        Long endTime = System.nanoTime();
         System.out.println("LinkedHashSet create execution time: " + (endTime - startTime)
-                + "size: "+ linkedHashSetCars.size());
+                + " ns " + " - " + "size: "+ linkedHashSetCars.size());
     }
     // #### READ ####
 
     //Hash
     public static void HashSetCarsRead(int index) {
-        Long startTime = System.currentTimeMillis();
-        String value = "No values read.";
+        Long startTime = System.nanoTime();
         hashSetCars.add(index);
-        Long endTime = System.currentTimeMillis();
+        Long endTime = System.nanoTime();
         System.out.println("HashSet read execution time: " + (endTime - startTime)
-                + "last value: \"" + value + "\"");
+                + " ns " + " - " + "last value: \"" + hashSetCars.size() + "\"");
     }
     //Tree
     public static void TreeSetCarsRead(int index) {
-        Long startTime = System.currentTimeMillis();
-        String value = "No values read.";
+        Long startTime = System.nanoTime();
         treeSetCars.add(index);
-        Long endTime = System.currentTimeMillis();
+        Long endTime = System.nanoTime();
         System.out.println("TreeSet execution time: " + (endTime - startTime)
-                + "last value: \"" + value + "\"");
+                + " ns " + " - " + "last value: \"" + treeSetCars.size() + "\"");
     }
     //Linked
     public static void linkedHashSetCarsRead(int index) {
-        Long startTime = System.currentTimeMillis();
-        String value = "No values read.";
+        Long startTime = System.nanoTime();
         linkedHashSetCars.add(index);
-        Long endTime = System.currentTimeMillis();
+        Long endTime = System.nanoTime();
         System.out.println("LinkedHashSet read execution time: " + (endTime - startTime)
-                + "last value: \"" + value + "\"");
+                + " ns " + " - " + "last value: \"" + linkedHashSetCars.size() + "\"");
     }
 
     // #### DELETE ####
 
     //Hash
     public static void HashSetCarsDelete(int index) {
-        Long startTime = System.currentTimeMillis();
+        Long startTime = System.nanoTime();
         hashSetCars.remove(index);
-        Long endTime = System.currentTimeMillis();
+        Long endTime = System.nanoTime();
         System.out.println("HashSet delete execution time: " + (endTime - startTime)
-                + "size: " + hashSetCars.size());
+                + " ns " + " - " + "size: " + hashSetCars.size());
     }
     //Tree
     public static void TreeSetCarsDelete(int index) {
-        Long startTime = System.currentTimeMillis();
+        Long startTime = System.nanoTime();
         treeSetCars.remove(index);
-        Long endTime = System.currentTimeMillis();
+        Long endTime = System.nanoTime();
         System.out.println("TreeSet delete execution time: " + (endTime - startTime)
-                + "size: " + treeSetCars.size());
+                + " ns " + " - " + "size: " + treeSetCars.size());
     }
 
     //Linked
     public static void linkedHashSetCarsDelete(int index) {
-        Long startTime = System.currentTimeMillis();
+        Long startTime = System.nanoTime();
         linkedHashSetCars.remove(index);
-        Long endTime = System.currentTimeMillis();
+        Long endTime = System.nanoTime();
         System.out.println("LinkedHashSet delete execution time: " + (endTime - startTime)
-                + "size: "+ linkedHashSetCars.size());
+                + " ns " + " - " + "size: "+ linkedHashSetCars.size());
     }
 
 }

@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Main {
 
 
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in); // lê um arquivo com nome e quantidade dos veículos
 
@@ -49,12 +49,12 @@ public class Main {
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
 
-       } //catch (NumberFormatException e) {
-//            System.out.println("Error: " + e.getMessage());
-//
-//        } catch (ArrayIndexOutOfBoundsException e) {
-//            System.out.println("Error: " + e.getMessage());
-//        }
+     } catch (NumberFormatException e) {
+           System.out.println("Error: " + e.getMessage());
+
+       } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Error: " + e.getMessage());
+       }
 
     }
 }
