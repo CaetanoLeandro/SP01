@@ -1,4 +1,4 @@
-package trycatch;
+package trycatchunchecked;
 
 public class SemEntradaException extends RuntimeException{
 

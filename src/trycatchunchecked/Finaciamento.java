@@ -1,4 +1,4 @@
-package trycatch;
+package trycatchunchecked;
 
 public class Finaciamento {
 
@@ -9,9 +9,9 @@ public class Finaciamento {
     public Finaciamento(Double valorVeiculo, Double entrada, Integer numeroParcelas) {
 
         if (entrada <= valorVeiculo * 0.3) {
-            throw new SemEntradaException("A entrada deve ser no mínimo 30% do valor total");
+            throw new Verificadados("A entrada deve ser no mínimo 30% do valor total");
         } else if (numeroParcelas < 30) {
-            throw new ParcelaNaoAprovadaException("O número mínimo de parcelas deve ser 30");
+            throw new Verificadados("O número mínimo de parcelas deve ser 30");
         }
 
         this.valorVeiculo = valorVeiculo;
