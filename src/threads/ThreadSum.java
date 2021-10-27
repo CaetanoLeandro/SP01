@@ -1,4 +1,4 @@
-package treads;
+package threads;
 
 public class ThreadSum implements Runnable{
 

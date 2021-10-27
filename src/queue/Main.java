@@ -22,7 +22,7 @@ public class Main {
         System.out.println("");
         System.out.println("1° element : " +car.peek()); // retorna o 1°elemento da Queue
         System.out.println("");
-        System.out.println("Removed element: " +car.poll()); // retorna e retira o da Queue
+        System.out.println("Removed element: " +car.poll()); // retorna e retira o item da fila
         System.out.println("");
         System.out.println(car);
         System.out.println("");

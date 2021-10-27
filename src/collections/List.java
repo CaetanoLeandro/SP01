@@ -23,9 +23,9 @@ public class List {
         //CREATE 1 OBJECT
         System.out.println("Create object 1:");
 
-        arrayListCarsCreate(800000);
-        stackListCarsCreate(800000);
-        linkedListCarsCreate(800000);
+        arrayListCarsCreate(440000);
+        stackListCarsCreate(440000);
+        linkedListCarsCreate(440000);
 
         System.out.println("");
 
@@ -55,7 +55,7 @@ public class List {
     //Array
     public static void arrayListCarsCreate() {
         Long startTime = System.currentTimeMillis();
-        for (int i = 0; i < 10000000; i++) {
+        for (int i = 0; i < 100000000; i++) {
             arrayListCars.add(i);
         }
         Long endTime = System.currentTimeMillis();

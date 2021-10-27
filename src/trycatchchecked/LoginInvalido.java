@@ -1,6 +1,6 @@
 package trycatchchecked;
 
-public class LoginInvalido extends Exception{
+public class LoginInvalido extends RuntimeException{
 
     public LoginInvalido() {
         super("Login Inválido");

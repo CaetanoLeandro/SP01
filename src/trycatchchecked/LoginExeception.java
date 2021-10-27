@@ -15,12 +15,13 @@ public class LoginExeception {
             System.out.println("Procedimento finalizado");
         }
     }
-    public static void login() throws LoginInvalido {// Checked necessário sinalizar pro método,
+
+    public static void login() {// Checked necessário sinalizar pro método,
         // para que complile (usando o throw)
         Scanner sc = new Scanner(System.in);
         String userName = "Leandro";
         String senha = "123";
-        int senha2 = Integer.parseInt(senha);
+       // int senha2 = Integer.parseInt(senha);
         System.out.println("Usuário");
         String userNameDig = sc.nextLine();
         System.out.println("Senha");

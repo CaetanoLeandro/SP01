@@ -92,12 +92,12 @@ public class List {
 
         System.out.println("Tempo de execução para adicionar do Arraylist= " + totalTimeAL1);
         System.out.println("Tempo de execução para adicionar do Linkedlist= " + totalTimeLL1);
-        System.out.println("Tempo de execução para a criação do Stack= " + totalTimeSL1);
+        System.out.println("Tempo de execução para adicionar do Stack= " + totalTimeSL1);
 
         System.out.println("============================================================");
 
         System.out.println("Tempo de execução para remover do Arraylist= " + totalTimeAL2);
         System.out.println("Tempo de execução para remover do Linkedlist= " + totalTimeLL2);
-        System.out.println("Tempo de execução para a criação do Stack= " + totalTimeSL2);
+        System.out.println("Tempo de execução para remover do Stack= " + totalTimeSL2);
     }
 }

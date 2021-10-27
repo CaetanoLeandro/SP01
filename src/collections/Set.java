@@ -91,7 +91,7 @@ public class Set {
     public static void HashSetCarsCreate(int index) {
         Long startTime = System.nanoTime();
         hashSetCars.add(index);
-        Long endTime = System.currentTimeMillis();
+        Long endTime = System.nanoTime();
         System.out.println("HashSet create execution time: " + (endTime - startTime)
                 + " ns " + " - " + "size: " + hashSetCars.size());
     }
